@@ -67,6 +67,6 @@ then
 
 else
 	echo "Total time to load page is:" $INT_TOTAL "sec"
-	echo "Not retarting"
+	echo "Not restarting"
 fi
 
