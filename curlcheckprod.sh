@@ -9,7 +9,7 @@
 
 
 # defines website to check
-WEBSITE="https://cnfl.csin.cz/index.action"
+WEBSITE="https://cnfl.csin.cz"
 # export and check uptime of confluence service
 UPTIME=$(ps axf | grep confluence | grep -o -P '(?<=Sl).*(?=/srv/sasbin/prod/confluence/confluence/jdk/bin/java)' | head -n 1 | sed s/'\s'//g)
 INT_UPTIME=${UPTIME%%:*}
