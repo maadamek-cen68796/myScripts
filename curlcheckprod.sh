@@ -60,6 +60,7 @@ then
 	if [ $COUNT_OF_THREE -ge 20 ] && [ ${TOTAL_ARRAY[2]} -gt 1 ]
 	then
 		echo "Restarting service"
+		/sbin/service --skip-redirect tomcat-prod_confluence_confluence restart/sbin/service --skip-redirect tomcat-prod_confluence_confluence restart
 	else
 		echo "Not restarting"
 	fi
