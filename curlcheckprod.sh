@@ -11,7 +11,7 @@
 # defines website to check
 WEBSITE="https://cnfl.csin.cz"
 # export and check uptime of confluence service
-UPTIME=$(ps axf | grep confluence | grep -o -P '(?<=Sl).*(?=/srv/sasbin/prod/confluence/confluence/jdk/bin/java)' | head -n 1 | sed s/'\s'//g)
+UPTIME=$(ps axf | grep -o -P '.*(?=/srv/sasbin/prod/confluence/confluence/jdk/bin/java -Djava)' | tail -n1 | awk '{ print $4 }')
 INT_UPTIME=${UPTIME%%:*}
 echo "Confluence uptime: " $INT_UPTIME "min"
 # if service running 30+ min check will happen else exit script
