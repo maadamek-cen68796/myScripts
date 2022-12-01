@@ -5,7 +5,13 @@
 # If total time is under 15 sec nothing will execute and script ends.
 # (else) if time is 15 sec or more, script will check connectivity two more times and possibly restart,
 # confluence service based on defined conditions.
-#
+# #!/bin/bash
+# cnflStat=$(ps axf | grep -oh java | wc -l)
+# if [[ $cnflStat -lt 3 ]]
+# then
+#         /sbin/service --skip-redirect tomcat-prod_confluence_confluence start
+# fi
+
 
 
 # defines website to check
